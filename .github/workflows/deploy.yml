@@ -21,4 +21,4 @@ jobs:
                  --dir=out \
                  --prod \
                  --site=$NETLIFY_SITE_ID \
-                 --site=NETLIFY_AUTH_TOKEN
+                 --site=$NETLIFY_AUTH_TOKEN
