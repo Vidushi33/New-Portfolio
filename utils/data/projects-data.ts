@@ -83,7 +83,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 5,
-    name: "Multi-Tenant Platform",
+    name: "Multi-Tenant SaaS Product",
     description:
       "Currently architecting a high-scale boilerplate for multi-tenant applications, focusing on enterprise-grade security and developer experience. This 'Work-in-Progress' project serves as a laboratory for implementing complex frontend patterns that go beyond standard CRUD apps.",
     tools: ["NestJS", "TypeScript", "MongoDB", "NextJs", "Zustand"],
