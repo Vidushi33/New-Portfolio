@@ -10,4 +10,4 @@ jobs:
       - name: Trigger Netlify Build
         run: | 
           sleep 5
-          curl -X POST ${{ secrets.NETLIFY_BUILD_HOOK }}
+          curl -f -v -X POST "${{ secrets.NETLIFY_BUILD_HOOK }}"
