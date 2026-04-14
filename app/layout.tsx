@@ -11,7 +11,7 @@ import "./css/card.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio of Vidushi Malik - Software Engineer",
+  title: "Vidushi Malik - Software Engineer",
   description:
     "This portfolio showcases the work of Vidushi Malik, a frontend engineer and self-taught developer passionate about building intuitive and engaging user experiences. I thrive on learning new technologies, embracing challenges, and continuously improving my craft. Always open to collaboration, I bring a quick-learning mindset and a drive to create impactful digital solutions.",
 };
