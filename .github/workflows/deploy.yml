@@ -13,6 +13,8 @@ jobs:
               run: npm install
             - name: Build Project
               run: npm run build
+            - name: Install Netlofy CLI
+              run: npm install -g netlify-cli
             - name: Deploy to Netlify
               run: | 
                  netlify deploy \
