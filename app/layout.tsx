@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Vidushi Malik - Software Engineer",
   description:
-    "This portfolio showcases the work of Vidushi Malik, a frontend engineer and self-taught developer passionate about building intuitive and engaging user experiences. I thrive on learning new technologies, embracing challenges, and continuously improving my craft. Always open to collaboration, I bring a quick-learning mindset and a drive to create impactful digital solutions.",
+    "This portfolio showcases the work of Vidushi Malik, a frontend engineer and self-taught developer Portfolio of Vidushi Malik, a frontend developer specializing in building responsive, user-friendly web applications using modern technologies like Next.js, React, and TypeScript.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
