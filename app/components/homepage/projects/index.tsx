@@ -1,38 +1,50 @@
 "use client";
-import { projectsData } from '@/utils/data/projects-data';
-import { CATEGORY_OPTIONS, PROJECT_CATEGORIES, getCategoryDisplay, type ProjectCategory } from '@/utils/constants/categories';
-import ProjectCard from './project-card';
-import { useState } from 'react';
+import { projectsData } from "@/utils/data/projects-data";
+import {
+  CATEGORY_OPTIONS,
+  PROJECT_CATEGORIES,
+  getCategoryDisplay,
+  type ProjectCategory,
+} from "@/utils/constants/categories";
+import ProjectCard from "./project-card";
+import { useState } from "react";
 
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState<ProjectCategory>(PROJECT_CATEGORIES.ONSITE);
+  const [activeCategory, setActiveCategory] = useState<ProjectCategory>(
+    PROJECT_CATEGORIES.ONSITE,
+  );
   const [showAll, setShowAll] = useState(false);
 
-  const onsiteProjects = projectsData.filter(p => p.isFeatured);
+  const onsiteProjects = projectsData.filter((p) => p.isFeatured);
 
-  const filteredProjects = activeCategory === PROJECT_CATEGORIES.ONSITE
-    ? onsiteProjects
-    : projectsData.filter(p => p.category === activeCategory);
+  const filteredProjects =
+    activeCategory === PROJECT_CATEGORIES.ONSITE
+      ? onsiteProjects
+      : projectsData.filter((p) => p.category === activeCategory);
 
-  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 4);
+  const displayedProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, 4);
   const hasMore = filteredProjects.length > 4;
 
   return (
-    <div id='projects' className="relative z-50 my-12 lg:my-24">
+    <div id="projects" className="relative z-50 my-12 lg:my-24">
       <div className="sticky top-10">
         <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl opacity-30"></div>
-        <div className="flex items-center justify-start relative">
+        <div className="flex items-center justify-center sm:justify-start sm:relative">
+          <span className="block sm:hidden w-4 h-[2px] bg-[#1a1443]"></span>
           <span
             key={activeCategory}
-            className="bg-[#1a1443] absolute left-0 w-fit text-white px-5 py-3 text-xl rounded-md animate-category-change"
+            className="bg-[#1a1443] sm:absolute left-0 w-fit text-white px-5 py-3 text-base sm:text-xl rounded-md animate-category-change"
           >
             {getCategoryDisplay(activeCategory).toUpperCase()} PROJECTS
           </span>
-          <span className="w-full h-[2px] bg-[#1a1443]"></span>
+         
+          <span className="w-4 sm:w-full h-[2px] bg-[#1a1443]"></span>
         </div>
       </div>
 
-      <div className="pt-10">
+      <div className="pt-10 sm:pt-16 xl:pt-10">
         {/* Category Filter Tabs */}
         <div className="mb-12 flex flex-wrap justify-center gap-2">
           {CATEGORY_OPTIONS.map((category) => (
@@ -42,10 +54,11 @@ const Projects = () => {
                 setActiveCategory(category);
                 setShowAll(false);
               }}
-              className={`px-4 cursor-pointer py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
-                ? "bg-gradient-to-r from-pink-500 to-violet-600 text-white shadow-lg"
-                : "bg-[#1a1443] text-gray-300 hover:text-white hover:bg-[#25213b]"
-                }`}
+              className={`px-4 cursor-pointer py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                activeCategory === category
+                  ? "bg-gradient-to-r from-pink-500 to-violet-600 text-white shadow-lg"
+                  : "bg-[#1a1443] text-gray-300 hover:text-white hover:bg-[#25213b]"
+              }`}
             >
               {getCategoryDisplay(category)}
             </button>
@@ -68,7 +81,9 @@ const Projects = () => {
             ))
           ) : (
             <div className="text-center py-12 bg-[#1a1443] rounded-lg">
-              <p className="text-gray-400">No projects found in this category.</p>
+              <p className="text-gray-400">
+                No projects found in this category.
+              </p>
             </div>
           )}
         </div>

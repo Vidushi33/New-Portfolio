@@ -51,7 +51,7 @@ function Navbar() {
                             href="#"
                             className="text-[#16f2b3] text-2xl sm:text-3xl font-bold hover:text-pink-600 transition-colors duration-300"
                         >
-                            VARUN KUMAR
+                            VIDUSHI MALIK
                         </Link>
                     </div>
 

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Skills() {
   return (
-    <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+    <div id="skills" className="relative z-50 border-t my-16 lg:my-24 border-[#25213b]">
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
 
       <div className="flex justify-center -translate-y-[1px]">
@@ -24,10 +24,10 @@ function Skills() {
         </div>
       </div>
 
-      <div className="w-full my-12">
+      <div className="w-full my-10 sm:my-12">
         <Marquee
           gradient={false}
-          speed={200}
+          speed={150}
           pauseOnHover={true}
           pauseOnClick={true}
           delay={0}

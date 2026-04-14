@@ -51,19 +51,19 @@ type SkillImageType = typeof gcp; // Using gcp as a representative type for SVG 
 export const skillsImage = (skill: string): SkillImageType | undefined => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
-    case "gcp":
-      return gcp;
+    // case "gcp":
+    //   return gcp;
     case "html":
       return html;
-    case "docker":
-      return docker;
+    // case "docker":
+    //   return docker;
     case "css":
       return css;
     case "javascript":
       return javascript;
     case "nextjs":
       return nextJS;
-      case "expressjs":
+    case "expressjs":
       return expressjs;
     case "reactjs":
       return react;
@@ -73,78 +73,78 @@ export const skillsImage = (skill: string): SkillImageType | undefined => {
       return bootstrap;
     case "mongodb":
       return mongoDB;
-    case "mysql":
-      return mysql;
-    case "postgresql":
-      return postgresql;
-    case "tailwind":
-      return tailwind;
-    case "vitejs":
-      return vitejs;
-    case "c":
-      return c;
-    case "c++":
-      return cplusplus;
-    case "prisma":
-      return prisma;
-    case "python":
-      return python;
-    case "aws":
-      return aws;
-    case "deno":
-      return deno;
-    case "firebase":
-      return firebase;
+    // case "mysql":
+    //   return mysql;
+    // case "postgresql":
+    //   return postgresql;
+    // case "tailwind":
+    //   return tailwind;
+    // case "vitejs":
+    //   return vitejs;
+    // case "c":
+    //   return c;
+    // case "c++":
+    //   return cplusplus;
+    // case "prisma":
+    //   return prisma;
+    // case "python":
+    //   return python;
+    // case "aws":
+    //   return aws;
+    // case "deno":
+    //   return deno;
+    // case "firebase":
+    //   return firebase;
     case "git":
       return git;
-    case "graphql":
-      return graphql;
+    // case "graphql":
+    //   return graphql;
     case "materialui":
       return materialui;
-    case "nginx":
-      return nginx;
-    case "wordpress":
-      return wordpress;
-    case "azure":
-      return azure;
+    // case "nginx":
+    //   return nginx;
+    // case "wordpress":
+    //   return wordpress;
+    // case "azure":
+    //   return azure;
     case "figma":
       return figma;
-    case "haxe":
-      return haxe;
-    case "markdown":
-      return markdown;
-    case "canva":
-      return canva;
-    case "kubernetes":
-      return kubernetes;
-    case "linux":
-      return linux;
-    case "fastapi":
-      return fastapi;
+    // case "haxe":
+    //   return haxe;
+    // case "markdown":
+    //   return markdown;
+    // case "canva":
+    //   return canva;
+    // case "kubernetes":
+    //   return kubernetes;
+    // case "linux":
+    //   return linux;
+    // case "fastapi":
+    //   return fastapi;
     case "nodejs":
       return nodejs;
-    case "redis":
-      return redis;
+    // case "redis":
+    //   return redis;
     case "postman":
       return postman;
     case "nestjs":
       return nestjs;
-    case "bullmq":
-      return redis; // Using Redis icon for BullMQ since they're related
-    case "knex.js":
-      return knex;
+    // case "bullmq":
+    //   return redis; // Using Redis icon for BullMQ since they're related
+    // case "knex.js":
+    //   return knex;
     case "github actions":
       return githubActions;
     case "tailwind css":
       return tailwindcss;
-    case "react native":
-      return reactnative;
-    case "minima.js":
-      return minimajs;
-    case "typeorm":
-      return typeorm; // Using postgresql icon for TypeORM
-    case "objection.js":
-      return objectionjs; // Using postgresql icon for Objection.js
+    // case "react native":
+    //   return reactnative;
+    // case "minima.js":
+    //   return minimajs;
+    // case "typeorm":
+    //   return typeorm; // Using postgresql icon for TypeORM
+    // case "objection.js":
+    //   return objectionjs; // Using postgresql icon for Objection.js
     default:
       return javascript;
   }

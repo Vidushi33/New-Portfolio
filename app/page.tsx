@@ -16,7 +16,7 @@ export default async function Home() {
             <Experience />
             <Skills />
             <Projects />
-            <GithubSection />
+            {/* <GithubSection /> */}
             <Education />
             <ContactSection />
         </div>

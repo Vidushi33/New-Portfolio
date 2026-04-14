@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { personalData } from "@/utils/data/personal-data";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -9,12 +10,19 @@ function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm">
-            © Developer Portfolio by <Link target="_blank" href="https://www.linkedin.com/in/imnurav/" className="text-[#16f2b3]">Varun Kumar</Link>
+            © Developer Portfolio by{" "}
+            <Link
+              target="_blank"
+              href={personalData.linkedIn}
+              className="text-[#16f2b3]"
+            >
+              Vidushi Malik
+            </Link>
           </p>
         </div>
       </div>
-    </div >
+    </div>
   );
-};
+}
 
 export default Footer;

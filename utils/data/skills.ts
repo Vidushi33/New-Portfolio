@@ -2,33 +2,36 @@ export const skillsData: string[] = [
   // 🔹 Core Programming
   "JavaScript",
   "TypeScript",
-  "C++",
+  // "C++",
 
   // 🔹 Backend
   "NodeJS",
   "ExpressJS",
   "NestJS",
-  "BullMQ",
-  "TypeORM",
-  "Knex.js",
-  "Objection.js",
+  // "BullMQ",
+  // "TypeORM",
+  // "Knex.js",
+  // "Objection.js",
 
   // 🔹 Frontend
   "ReactJS",
   "NextJS",
-  "React Native",
+  // "React Native",
   "Tailwind CSS",
   "HTML",
   "CSS",
+  "Bootstrap",
+  "Material UI",
+  "Figma",
 
   // 🔹 Databases & Caching
   "MongoDB",
-  "MySQL",
-  "Redis",
+  // "MySQL",
+  // "Redis",
 
   // 🔹 DevOps & Cloud
-  "Docker",
-  "AWS",
+  // "Docker",
+  // "AWS",
   "GitHub Actions",
 
   // 🔹 Tools

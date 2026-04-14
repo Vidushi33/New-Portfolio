@@ -113,7 +113,7 @@ ${message}
 
     /* ---- Send auto reply (non-blocking) ---- */
 
-    sendAutoReply(name, email);
+    // sendAutoReply(name, email);
 
     return NextResponse.json(
       { success: true, message: "Message sent successfully!" },

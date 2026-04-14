@@ -7,7 +7,7 @@ import Image from "next/image";
 
 function Experience() {
     return (
-        <div id="experience" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+        <div id="experience" className="relative z-50 border-t my-16 lg:my-24 border-[#25213b]">
             <Image
                 src="/section.svg"
                 alt="Hero"
@@ -18,20 +18,20 @@ function Experience() {
 
             <div className="flex justify-center my-5 lg:py-8">
                 <div className="flex  items-center">
-                    <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+                    <span className="w-16 sm:w-24 h-[2px] bg-[#1a1443]"></span>
                     <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
                         Experiences
                     </span>
-                    <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+                    <span className="w-16 sm:w-24 h-[2px] bg-[#1a1443]"></span>
                 </div>
             </div>
 
             <div className="py-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-                    <div className="flex justify-center items-start">
-                        <div className="w-full h-full">
+                    <div className="hidden sm:flex justify-center items-start">
+                        {/* <div className="w-full h-full"> */}
                             <AnimationLottie animationPath={experience} />
-                        </div>
+                        {/* </div> */}
                     </div>
 
                     <div>
@@ -52,15 +52,15 @@ function Experience() {
                                                     {experience.duration}
                                                 </p>
                                             </div>
-                                            <div className="flex items-center gap-x-8 px-3 py-5">
+                                            <div className="flex items-center gap-x-5 sm:gap-x-8 px-3 py-5">
                                                 <div className="text-violet-500  transition-all duration-300 hover:scale-125">
                                                     <BsPersonWorkspace size={36} />
                                                 </div>
                                                 <div>
-                                                    <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                                                    <p className="text-sm sm:text-xl mb-2 font-medium uppercase">
                                                         {experience.title}
                                                     </p>
-                                                    <p className="text-sm sm:text-base">
+                                                    <p className="text-xs sm:text-base">
                                                         {experience.company}
                                                     </p>
                                                 </div>

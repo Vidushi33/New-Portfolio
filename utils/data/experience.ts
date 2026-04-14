@@ -8,20 +8,20 @@ interface Experience {
 export const experiences: Experience[] = [
   {
     id: 1,
-    title: "Software Development Engineer",
+    title: "Software Engineer",
     company: "Khan Global Studies Pvt. Ltd.",
-    duration: "(Jan 2023 - Present)",
+    duration: "(Oct 2023 - Feb 2026)",
   },
-  //   {
-  //     id: 2,
-  //     title: "FullStack Developer",
-  //     company: "Fiverr (freelance)",
-  //     duration: "(Jun 2021 - Jan 2022)"
-  //   },
   {
+    id: 2,
+    title: "Web Developer",
+    company: "Value Plus Consulting",
+    duration: "(March 2022 - June 2022)",
+  },
+   {
     id: 3,
-    title: "Self Employed",
-    company: "Code and build something in everyday.",
-    duration: "(Jan 2018 - Present)",
+    title: "MERN Stack Developer",
+    company: "Entremax Global",
+    duration: "(March 2022 - April 2022)",
   },
 ];

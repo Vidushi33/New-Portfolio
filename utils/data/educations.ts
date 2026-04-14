@@ -3,25 +3,23 @@ interface Education {
   title: string;
   duration: string;
   institution: string;
+  perc:string
 }
 
 export const educations: Education[] = [
   {
     id: 1,
     title: "Bachelor of Technology in Computer Science & Engineering",
-    duration: "2018 - 2022",
-    institution: "Maharshi Dayanand University",
+    duration: "2019 - 2023",
+    institution: "Krishna Engineering College",
+    perc:"82.3"
   },
   {
     id: 2,
     title: "Intermediate",
-    duration: "2015 - 2017",
-    institution: "Kautilya Govt Sarvodaya Bal Vidyalaya (CBSE)",
+    duration: "2017 - 2019",
+    institution: "St. Joseph's Academy School",
+    perc:"81.6"
   },
-  {
-    id: 3,
-    title: "Matriculate",
-    duration: "2008 - 2015",
-    institution: "Tinu Public School (CBSE)",
-  }
+ 
 ]

@@ -13,10 +13,24 @@ function AboutSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="order-2 lg:order-1">
           <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
-            Who I am?
+            Who am I?
           </p>
           <p className="text-gray-200 text-sm lg:text-lg">
-            {personalData.description}
+            <b>
+              I’m a Software Engineer focused on building scalable products and
+              resilient systems.
+            </b>{" "}
+          </p>
+          <p className="text-gray-200 text-sm lg:text-lg">
+              With 2+ years in the <b>Next.js ecosystem</b>, I specialize in
+              transforming complex Figma designs into high-performance web
+              applications. I focus on the critical details that drive product
+              success: slashing load times by 40% via <b>Core Web Vitals</b> optimization and ensuring 100% data integrity through robust state management.
+          </p>
+          <p className="text-gray-200 text-sm lg:text-lg">
+            <b>
+              I thrive on taking full ownership of projects to deliver seamless experiences that solve real-world problems.
+            </b>{" "}
           </p>
         </div>
         <div className="flex justify-center order-1 lg:order-2">
@@ -24,13 +38,13 @@ function AboutSection() {
             src={personalData.profile}
             width={280}
             height={280}
-            alt="Varun Kumar"
+            alt="Vidushi Malik"
             className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
           />
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default AboutSection;
