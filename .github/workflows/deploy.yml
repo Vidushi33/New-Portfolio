@@ -1,4 +1,4 @@
-name: Deplot To Netlify
+name: Deploy To Netlify
 on:
   push:
     branches:
@@ -8,4 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Netlify Build
-        run: curl -X POST ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          # Adding a sleep ensures GitHub's API has updated before Netlify fetches
+          sleep 5
+          curl -X POST -d "{}" "https://api.netlify.com/build_hooks/${{ secrets.NETLIFY_BUILD_HOOK }}?trigger_branch=master&trigger_title=GA+Push+$(date +%F)"
