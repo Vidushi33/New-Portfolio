@@ -15,7 +15,7 @@
 
 ## About
 
-I'm a Full Stack Developer passionate about building beautiful, performant web applications. This portfolio showcases my journey, projects, and technical expertise. Explore the different sections to see what I've been working on!
+I am a Software Engineer specializing in the Next.js ecosystem, dedicated to building high-performance, secure web applications. This portfolio showcases my transition from complex designs to production-ready systems, with a focus on pixel-perfect UI and scalable frontend architecture.
 
 ---
 
@@ -24,7 +24,7 @@ I'm a Full Stack Developer passionate about building beautiful, performant web a
 ### 🎯 My Recent Work
 
 Visit the portfolio to explore:
-- **Web Applications** - Full-stack projects with modern architecture
+- **Web Applications** - Frontend-stack projects with modern architecture
 - **Interactive Components** - Smooth animations and responsive designs
 - **API Integrations** - Real-world backend implementations
 - **Performance Optimized** - Fast-loading, SEO-friendly sites
@@ -42,7 +42,6 @@ Visit the portfolio to explore:
 
 ### Design & UX
 - Responsive design for all devices
-- Dark mode support
 - Smooth page transitions
 - Optimized for performance
 
@@ -68,7 +67,6 @@ Visit the portfolio to explore:
 - Built with Next.js for performance
 - TypeScript for code quality
 - Proper project structure
-- API-driven data management
 
 ---
 
@@ -95,7 +93,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 Create a `.env.local` file:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:3000/api
+NEXT_PUBLIC_API_URL=http://localhost:3000/
 ```
 
 ### Build for Production
@@ -129,28 +127,25 @@ assets/                   # SVGs, animations, images
 
 ---
 
-## Sections Overview
+## Portfolio Architecture
 
 ### Hero Section
-Eye-catching introduction with smooth animations and call-to-action
+A high-impact introduction featuring animations and a direct call to action for my latest production work.
 
 ### About
-Background, expertise, and what drives me as a developer
+A deep dive into my engineering philosophy, focusing on my journey in the Next.js ecosystem and my commitment to performance and security.
 
-### Projects
-Detailed showcase of my best work with descriptions and links
+### Featured Projects
+A curated gallery of production-grade applications, highlighting KGS Store, Pirafy, and Catafy with technical deep dives and live links.
 
-### Skills
-Technologies and tools I'm proficient in
+### Technical Stack
+A breakdown of my proficiency in React, TypeScript, and Zustand, along with my specialized toolkit for UI/UX.
 
-### Experience
-Professional background and career highlights
-
-### Blog
-Technical articles and insights
+### Professional Journey
+A timeline of my career highlights, focusing on building scalable frontend architectures and optimizing Core Web Vitals.
 
 ### Contact
-Easy way to reach out and discuss opportunities
+A streamlined gateway for discussing potential collaborations, project architectural needs, or engineering opportunities.
 
 ---
 
@@ -166,13 +161,11 @@ Easy way to reach out and discuss opportunities
 
 ## Connect With Me
 
-- **Portfolio**: [varun.netlify.app](https://varun.netlify.app)
-- **GitHub**: [github.com/imnurav](https://github.com/imnurav)
-- **LinkedIn**: [linkedin.com/in/imnurav](https://linkedin.com/in/imnurav)
-- **Email**: [kumarvarun9811@gmail.com](mailto:kumarvarun9811@gmail.com)
+- **Portfolio**: [vidushimalik.netlify.app](https://vidushimalik.netlify.app)
+- **GitHub**: [github.com/Vidushimalik](https://github.com/Vidushi33)
+- **LinkedIn**: [linkedin.com/in/vidushimalik](https://www.linkedin.com/in/vidushi-malik-11263b1ab/)
+- **Email**: [vidushimalik135@gmail.com](mailto:vidushimalik135@gmail.com)
 
 ---
 
 **Let's build something amazing together! 🚀**
-
-# New-Portfolio
