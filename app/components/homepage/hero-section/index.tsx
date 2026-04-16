@@ -1,12 +1,12 @@
 "use client"
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { personalData } from "@/utils/data/personal-data";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { RiContactsFill } from "react-icons/ri";
-import { MdDownload } from "react-icons/md";
-import { SiLeetcode } from "react-icons/si";
 import Image from "next/image";
 import Link from "next/link";
+import GithubIcon from "@/app/assets/icons/githubIcon";
+import LinkedinIcon from "@/app/assets/icons/linkedinIcon";
+import Leetcode from "@/app/assets/icons/leetcodeIcon";
+import ContactmeIcon from "@/app/assets/icons/contactmeIcon";
+import DownloadIcon from "@/app/assets/icons/downloadIcon";
 
 function HeroSection() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -42,27 +42,27 @@ function HeroSection() {
             <span className=" text-[#16f2b3]">{personalData.designation}</span>.
           </h1>
 
-          <div className="my-12 flex items-center gap-5">
+          <div className="my-12 flex items-center gap-3 lg:gap-5">
             <Link
               href={personalData.github}
               target="_blank"
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
-              <BsGithub size={30} />
+              <GithubIcon  />
             </Link>
             <Link
               href={personalData.linkedIn}
               target="_blank"
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
-              <BsLinkedin size={30} />
+              <LinkedinIcon />
             </Link>
             <Link
               href={personalData.leetcode}
               target="_blank"
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
-              <SiLeetcode size={30} />
+              <Leetcode />  
             </Link>
           </div>
 
@@ -74,7 +74,7 @@ function HeroSection() {
             >
               <button className="cursor-pointer px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
                 <span>Contact me</span>
-                <RiContactsFill size={16} />
+                <ContactmeIcon />
               </button>
             </Link>
 
@@ -86,7 +86,7 @@ function HeroSection() {
               download="Vidushi-Malik-CV.pdf"
             >
               <span>Get Resume</span>
-              <MdDownload size={16} />
+              <DownloadIcon />
             </Link>
           </div>
         </div>

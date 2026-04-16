@@ -1,9 +1,9 @@
 import AnimationLottie from "../../helper/animation-lottie";
 import lottieFile from "../../../assets/lottie/study.json";
 import { educations } from "@/utils/data/educations";
-import { BsPersonWorkspace } from "react-icons/bs";
 import GlowCard from "../../helper/glow-card";
 import Image from "next/image";
+import WorkSpaceIcon from "@/app/assets/icons/workspaceIcon";
 
 interface EducationItem {
   id: number;
@@ -72,7 +72,7 @@ function Education() {
                     </div>
                     <div className="flex items-center gap-x-5  sm:gap-x-8 px-3 py-5">
                       <div className="text-violet-500  transition-all duration-300 hover:scale-125">
-                        <BsPersonWorkspace size={36} />
+                        <WorkSpaceIcon />
                       </div>
                       <div>
                         <p className="text-sm sm:text-xl  font-medium uppercase">

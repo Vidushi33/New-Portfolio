@@ -1,5 +1,5 @@
 "use client";
-import { FaGithub, FaStar, FaCodeBranch, FaFolder, FaLanguage, FaCalendarAlt, FaUserFriends } from "react-icons/fa";
+// import { FaGithub, FaStar, FaCodeBranch, FaFolder, FaLanguage, FaCalendarAlt, FaUserFriends } from "react-icons/fa";
 import { personalData } from "@/utils/data/personal-data";
 import { useState, useEffect } from "react";
 
@@ -169,25 +169,25 @@ function GithubSection() {
                 {/* Main Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                     <div className="bg-[#1a1443] p-6 rounded-xl border border-[#353a52] text-center hover:border-pink-500 transition-colors">
-                        <FaFolder className="text-[#16f2b3] text-2xl mx-auto mb-3" />
+                        {/* <FaFolder className="text-[#16f2b3] text-2xl mx-auto mb-3" /> */}
                         <div className="text-3xl font-bold text-white">{stats.user.public_repos}</div>
                         <div className="text-gray-400 text-sm">Repositories</div>
                     </div>
 
                     <div className="bg-[#1a1443] p-6 rounded-xl border border-[#353a52] text-center hover:border-pink-500 transition-colors">
-                        <FaStar className="text-yellow-400 text-2xl mx-auto mb-3" />
+                        {/* <FaStar className="text-yellow-400 text-2xl mx-auto mb-3" /> */}
                         <div className="text-3xl font-bold text-white">{stats.totalStars}</div>
                         <div className="text-gray-400 text-sm">Total Stars</div>
                     </div>
 
                     <div className="bg-[#1a1443] p-6 rounded-xl border border-[#353a52] text-center hover:border-pink-500 transition-colors">
-                        <FaCodeBranch className="text-green-400 text-2xl mx-auto mb-3" />
+                        {/* <FaCodeBranch className="text-green-400 text-2xl mx-auto mb-3" /> */}
                         <div className="text-3xl font-bold text-white">{stats.totalForks}</div>
                         <div className="text-gray-400 text-sm">Forks</div>
                     </div>
 
                     <div className="bg-[#1a1443] p-6 rounded-xl border border-[#353a52] text-center hover:border-pink-500 transition-colors">
-                        <FaUserFriends className="text-blue-400 text-2xl mx-auto mb-3" />
+                        {/* <FaUserFriends className="text-blue-400 text-2xl mx-auto mb-3" /> */}
                         <div className="text-3xl font-bold text-white">{stats.user.followers}</div>
                         <div className="text-gray-400 text-sm">Followers</div>
                     </div>
@@ -197,7 +197,7 @@ function GithubSection() {
                     {/* Top Languages */}
                     <div className="bg-[#1a1443] p-6 rounded-xl border border-[#353a52]">
                         <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                            <FaLanguage className="text-pink-500" />
+                            {/* <FaLanguage className="text-pink-500" /> */}
                             Top Languages
                         </h3>
                         <div className="space-y-3">
@@ -233,7 +233,7 @@ function GithubSection() {
                     {/* GitHub Profile Info */}
                     <div className="bg-[#1a1443] p-6 rounded-xl border border-[#353a52]">
                         <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                            <FaGithub className="text-pink-500" />
+                            {/* <FaGithub className="text-pink-500" /> */}
                             GitHub Profile
                         </h3>
                         <div className="flex items-center gap-4 mb-4">
@@ -254,11 +254,11 @@ function GithubSection() {
 
                         <div className="space-y-2 text-sm">
                             <div className="flex items-center gap-2 text-gray-400">
-                                <FaCalendarAlt className="text-[#16f2b3]" />
+                                {/* <FaCalendarAlt className="text-[#16f2b3]" /> */}
                                 <span>Joined {new Date(stats.user.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</span>
                             </div>
                             <div className="flex items-center gap-2 text-gray-400">
-                                <FaUserFriends className="text-blue-400" />
+                                {/* <FaUserFriends className="text-blue-400" /> */}
                                 <span>{stats.user.following} following</span>
                             </div>
                         </div>
@@ -294,11 +294,11 @@ function GithubSection() {
                                     </h4>
                                     <div className="flex items-center gap-2 text-sm text-gray-400">
                                         <span className="flex items-center gap-1">
-                                            <FaStar className="text-yellow-400" size={14} />
+                                            {/* <FaStar className="text-yellow-400" size={14} /> */}
                                             {repo.stargazers_count}
                                         </span>
                                         <span className="flex items-center gap-1">
-                                            <FaCodeBranch className="text-green-400" size={14} />
+                                            {/* <FaCodeBranch className="text-green-400" size={14} /> */}
                                             {repo.forks_count}
                                         </span>
                                     </div>
@@ -339,7 +339,7 @@ function GithubSection() {
                                 <div key={repo.id} className="flex items-center justify-between py-3 border-b border-[#353a52] last:border-b-0">
                                     <div className="flex items-center gap-3">
                                         <div className="w-10 h-10 bg-[#0d1224] rounded-lg flex items-center justify-center">
-                                            <FaFolder className="text-[#16f2b3]" />
+                                            {/* <FaFolder className="text-[#16f2b3]" /> */}
                                         </div>
                                         <div>
                                             <h4 className="text-white font-medium">{repo.name}</h4>
@@ -367,7 +367,7 @@ function GithubSection() {
                                             </span>
                                         )}
                                         <span className="flex items-center gap-1">
-                                            <FaStar className="text-yellow-400" size={12} />
+                                            {/* <FaStar className="text-yellow-400" size={12} /> */}
                                             {repo.stargazers_count}
                                         </span>
                                     </div>

@@ -6,10 +6,15 @@ import {
   getCategoryDisplay,
   type ProjectCategory,
 } from "@/utils/constants/categories";
-import ProjectCard from "./project-card";
+// import ProjectCard from "./project-card";
 import { useState } from "react";
+import dynamic from "next/dynamic";
+import SingleProject from "./single-project";
 
 const Projects = () => {
+  const ProjectCard = dynamic(() => import("./project-card"), {
+  ssr: false,
+});
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>(
     PROJECT_CATEGORIES.ONSITE,
   );

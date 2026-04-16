@@ -1,9 +1,9 @@
 import AnimationLottie from "../../helper/animation-lottie";
 import experience from '../../../assets/lottie/code.json';
 import { experiences } from "@/utils/data/experience";
-import { BsPersonWorkspace } from "react-icons/bs";
 import GlowCard from "../../helper/glow-card";
 import Image from "next/image";
+import WorkSpaceIcon from "@/app/assets/icons/workspaceIcon";
 
 function Experience() {
     return (
@@ -28,7 +28,7 @@ function Experience() {
 
             <div className="py-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-                    <div className="hidden sm:flex justify-center items-start">
+                    <div className="hidden sm:flex justify-center items-center">
                         {/* <div className="w-full h-full"> */}
                             <AnimationLottie animationPath={experience} />
                         {/* </div> */}
@@ -54,7 +54,7 @@ function Experience() {
                                             </div>
                                             <div className="flex items-center gap-x-5 sm:gap-x-8 px-3 py-5">
                                                 <div className="text-violet-500  transition-all duration-300 hover:scale-125">
-                                                    <BsPersonWorkspace size={36} />
+                                                    <WorkSpaceIcon />
                                                 </div>
                                                 <div>
                                                     <p className="text-sm sm:text-xl mb-2 font-medium uppercase">

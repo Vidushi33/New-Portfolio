@@ -1,5 +1,5 @@
 "use client";
-import { FaStar, FaCodeBranch, FaFolder, FaLanguage } from "react-icons/fa";
+// import { FaStar, FaCodeBranch, FaFolder, FaLanguage } from "react-icons/fa";
 import { getGitHubStats, GitHubUser } from "@/utils/github-api";
 import { personalData } from "@/utils/data/personal-data";
 import { useState, useEffect } from "react";
@@ -59,7 +59,7 @@ function EnhancedGithubStats() {
     <div className="mt-8 p-6 bg-[#1a1443] rounded-xl border border-[#353a52]">
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-xl font-bold text-white flex items-center gap-2">
-          <FaFolder className="text-[#16f2b3]" />
+          {/* <FaFolder className="text-[#16f2b3]" /> */}
           GitHub Statistics
         </h3>
         <a
@@ -76,7 +76,7 @@ function EnhancedGithubStats() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <div className="bg-[#0d1224] p-4 rounded-lg border border-[#353a52]">
           <div className="flex items-center gap-2 mb-2">
-            <FaFolder className="text-[#16f2b3]" />
+            {/* <FaFolder className="text-[#16f2b3]" /> */}
             <span className="text-gray-400 text-sm">Repositories</span>
           </div>
           <div className="text-2xl font-bold text-white">{stats.stats.totalRepos}</div>
@@ -84,7 +84,7 @@ function EnhancedGithubStats() {
 
         <div className="bg-[#0d1224] p-4 rounded-lg border border-[#353a52]">
           <div className="flex items-center gap-2 mb-2">
-            <FaStar className="text-yellow-400" />
+            {/* <FaStar className="text-yellow-400" /> */}
             <span className="text-gray-400 text-sm">Stars</span>
           </div>
           <div className="text-2xl font-bold text-white">{stats.stats.totalStars}</div>
@@ -92,7 +92,7 @@ function EnhancedGithubStats() {
 
         <div className="bg-[#0d1224] p-4 rounded-lg border border-[#353a52]">
           <div className="flex items-center gap-2 mb-2">
-            <FaCodeBranch className="text-green-400" />
+            {/* <FaCodeBranch className="text-green-400" /> */}
             <span className="text-gray-400 text-sm">Forks</span>
           </div>
           <div className="text-2xl font-bold text-white">{stats.stats.totalForks}</div>
@@ -111,7 +111,7 @@ function EnhancedGithubStats() {
       {stats.stats.topLanguages.length > 0 && (
         <div className="mb-6">
           <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-            <FaLanguage className="text-pink-500" />
+            {/* <FaLanguage className="text-pink-500" /> */}
             Top Languages
           </h4>
           <div className="flex flex-wrap gap-2">
@@ -164,11 +164,11 @@ function EnhancedGithubStats() {
                       </span>
                     )}
                     <span className="flex items-center gap-1">
-                      <FaStar className="text-yellow-400" size={12} />
+                      {/* <FaStar className="text-yellow-400" size={12} /> */}
                       {repo.stargazers_count}
                     </span>
                     <span className="flex items-center gap-1">
-                      <FaCodeBranch className="text-green-400" size={12} />
+                      {/* <FaCodeBranch className="text-green-400" size={12} /> */}
                       {repo.forks_count}
                     </span>
                   </div>

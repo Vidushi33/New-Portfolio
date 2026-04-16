@@ -1,10 +1,10 @@
 "use client";
 import { isValidEmail } from "@/utils/check-email";
-import { TbMailForward } from "react-icons/tb";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import axios from "axios";
+import MailForward from "@/app/assets/icons/mailForward";
 
 interface FormData {
   name: string;
@@ -86,10 +86,7 @@ function ContactForm() {
       // }
 
       // Send contact form data
-      const res = await axios.post(
-        `/api/contact`,
-        userInput,
-      );
+      const res = await axios.post(`/api/contact`, userInput);
 
       toast.success("Message sent successfully!");
       setUserInput({
@@ -195,7 +192,7 @@ function ContactForm() {
               ) : (
                 <span className="flex items-center gap-1">
                   Send Message
-                  <TbMailForward size={20} />
+                  <MailForward />
                 </span>
               )}
             </button>

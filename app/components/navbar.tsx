@@ -1,8 +1,9 @@
 "use client";
-import { HiMenu, HiX } from "react-icons/hi";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
+import CloseIcon from "../assets/icons/closeIcon";
+import HamburgerIcon from "../assets/icons/hamburgerIcon";
 
 function Navbar() {
     const router = useRouter();
@@ -77,9 +78,9 @@ function Navbar() {
                         aria-expanded="false"
                     >
                         {isOpen ? (
-                            <HiX className="h-6 w-6" />
+                            <CloseIcon />
                         ) : (
-                            <HiMenu className="h-6 w-6" />
+                            <HamburgerIcon />
                         )}
                     </button>
                 </div>
