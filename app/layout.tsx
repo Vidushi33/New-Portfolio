@@ -18,18 +18,19 @@ export const metadata = {
     "Software Engineer specializing in React & Next.js. Focused on high-performance frontend architecture and scalable web applications.",
 
   metadataBase: new URL(baseUrl),
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Vidushi Malik | Software Engineer",
     description:
       "Software Engineer specializing in React & Next.js. Focused on high-performance frontend architecture and scalable web applications.",
-    url: "https://vidushimalik.netlify.app/",
-    icons: {
-    icon: "/favicon.ico", 
-    apple: "/apple-touch-icon.png", 
-    alternates: {
-    canonical: "/",
-  },
-  },
+    url: baseUrl,
+
     images: [
       {
         url: "https://vidushimalik.netlify.app/og-image.png",
