@@ -7,18 +7,17 @@ import AboutSection from "./components/homepage/about";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 
-
 export default async function Home() {
-    return (
-        <div suppressHydrationWarning >
-            <HeroSection />
-            <AboutSection />
-            <Experience />
-            <Skills />
-            <Projects />
-            {/* <GithubSection /> */}
-            <Education />
-            <ContactSection />
-        </div>
-    );
+  return (
+    <div suppressHydrationWarning>
+      <HeroSection />
+      <AboutSection />
+      <Experience />
+      <Skills />
+      <Projects />
+      {/* <GithubSection /> */}
+      <Education />
+      <ContactSection />
+    </div>
+  );
 }

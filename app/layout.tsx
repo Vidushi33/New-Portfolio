@@ -1,4 +1,4 @@
-import { GoogleTagManager } from "@next/third-parties/google";
+// import { GoogleTagManager } from "@next/third-parties/google";
 import ScrollToTop from "./components/helper/scroll-to-top";
 import ToastProvider from "./components/ToastProvider";
 import { Inter } from "next/font/google";
@@ -7,19 +7,36 @@ import Navbar from "./components/navbar";
 import { ReactNode } from "react";
 import "./css/globals.scss";
 import "./css/card.scss";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Vidushi Malik - Software Engineer",
+  title: "Vidushi Malik | Software Engineer",
   description:
-    "Portfolio of Vidushi Malik, a frontend developer specializing in building responsive, user-friendly web applications using modern technologies like Next.js, React, and TypeScript.",
+    "Software Engineer with 2.5 years of experience specializing in React and Next.js. Focused on building high-performance frontend architectures, UI optimization, and scalable web applications.",
+
+  openGraph: {
+    title: "Vidushi Malik | Software Engineer",
+    description:
+      "Software Engineer with 2.5 years of experience specializing in React and Next.js. Focused on building high-performance frontend architectures, UI optimization, and scalable web applications.",
+    url: "https://vidushimalik.netlify.app/",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Vidushi Malik Portfolio Preview",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.className}>
-      <body cz-shortcut-listen="true" >
+      <body cz-shortcut-listen="true">
         <ToastProvider />
         <main className="min-h-screen relative mx-auto px-4 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
           <Navbar />
@@ -29,6 +46,36 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
       </body>
       {/* <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM || ""} /> */}
+
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Vidushi Malik",
+            jobTitle: [
+              "Frontend Developer",
+              "Software Engineer",
+              "Web Developer",
+            ],
+            knowsAbout: [
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Zustand",
+              "Frontend Architecture",
+              "Performance Optimization",
+            ],
+            url: "https://vidushimalik.netlify.app/",
+            sameAs: [
+              "https://www.linkedin.com/in/vidushi-malik-11263b1ab/",
+              "https://github.com/Vidushi33",
+            ],
+          }),
+        }}
+      />
     </html>
   );
 }

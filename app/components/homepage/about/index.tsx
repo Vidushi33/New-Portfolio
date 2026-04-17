@@ -22,14 +22,17 @@ function AboutSection() {
             </b>{" "}
           </p>
           <p className="text-gray-200 text-sm lg:text-lg">
-              With 2+ years in the <b>Next.js ecosystem</b>, I specialize in
-              transforming complex Figma designs into high-performance web
-              applications. I focus on the critical details that drive product
-              success: slashing load times by 40% via <b>Core Web Vitals</b> optimization and ensuring 100% data integrity through robust state management.
+            With 2+ years in the <b>Next.js ecosystem</b>, I specialize in
+            transforming complex Figma designs into high-performance web
+            applications. I focus on the critical details that drive product
+            success: slashing load times by 40% via <b>Core Web Vitals</b>{" "}
+            optimization and ensuring 100% data integrity through robust state
+            management.
           </p>
           <p className="text-gray-200 text-sm lg:text-lg">
             <b>
-              I thrive on taking full ownership of projects to deliver seamless experiences that solve real-world problems.
+              I thrive on taking full ownership of projects to deliver seamless
+              experiences that solve real-world problems.
             </b>{" "}
           </p>
         </div>
@@ -39,7 +42,7 @@ function AboutSection() {
             width={280}
             height={280}
             alt="Vidushi Malik"
-            priority
+            fetchPriority="high"
             className="rounded-lg transition-all duration-1000 sm:grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
           />
         </div>
