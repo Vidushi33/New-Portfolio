@@ -42,7 +42,6 @@ function AboutSection() {
             width={280}
             height={280}
             alt="Vidushi Malik"
-            fetchPriority="high"
             className="rounded-lg transition-all duration-1000 sm:grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
           />
         </div>
