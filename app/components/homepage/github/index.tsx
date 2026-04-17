@@ -1,6 +1,7 @@
 "use client";
 // import { FaGithub, FaStar, FaCodeBranch, FaFolder, FaLanguage, FaCalendarAlt, FaUserFriends } from "react-icons/fa";
 import { personalData } from "@/utils/data/personal-data";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 interface GitHubRepo {
@@ -263,14 +264,14 @@ function GithubSection() {
                             </div>
                         </div>
 
-                        <a
+                        <Link
                             href={personalData.github}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-4 inline-block w-full text-center bg-gradient-to-r from-pink-500 to-violet-600 text-white py-2 px-4 rounded-lg hover:scale-105 transition-transform duration-200"
                         >
                             View Full Profile
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -281,7 +282,7 @@ function GithubSection() {
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {topRepos.map((repo) => (
-                            <a
+                            <Link
                                 key={repo.id}
                                 href={repo.html_url}
                                 target="_blank"
@@ -323,7 +324,7 @@ function GithubSection() {
                                         <span className="text-gray-300 text-sm">{repo.language}</span>
                                     </div>
                                 )}
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </div>

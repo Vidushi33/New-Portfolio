@@ -3,6 +3,7 @@
 import { getGitHubStats, GitHubUser } from "@/utils/github-api";
 import { personalData } from "@/utils/data/personal-data";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface GitHubStats {
   user: GitHubUser;
@@ -62,14 +63,14 @@ function EnhancedGithubStats() {
           {/* <FaFolder className="text-[#16f2b3]" /> */}
           GitHub Statistics
         </h3>
-        <a
+        <Link
           href={personalData.github}
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm text-[#16f2b3] hover:text-pink-500 transition-colors"
         >
           View Profile →
-        </a>
+        </Link>
       </div>
 
       {/* Main Stats */}
@@ -133,7 +134,7 @@ function EnhancedGithubStats() {
           <h4 className="text-lg font-semibold text-white mb-3">Recent Repositories</h4>
           <div className="space-y-2">
             {stats.stats.recentRepos.slice(0, 3).map((repo: any) => (
-              <a
+              <Link
                 key={repo.id}
                 href={repo.html_url}
                 target="_blank"
@@ -173,7 +174,7 @@ function EnhancedGithubStats() {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

@@ -11,16 +11,25 @@ import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const baseUrl = "https://vidushimalik.netlify.app";
 export const metadata = {
   title: "Vidushi Malik | Software Engineer",
   description:
-    "Software Engineer with 2.5 years of experience specializing in React and Next.js. Focused on building high-performance frontend architectures, UI optimization, and scalable web applications.",
+    "Software Engineer specializing in React & Next.js. Focused on high-performance frontend architecture and scalable web applications.",
 
+  metadataBase: new URL(baseUrl),
   openGraph: {
     title: "Vidushi Malik | Software Engineer",
     description:
-      "Software Engineer with 2.5 years of experience specializing in React and Next.js. Focused on building high-performance frontend architectures, UI optimization, and scalable web applications.",
+      "Software Engineer specializing in React & Next.js. Focused on high-performance frontend architecture and scalable web applications.",
     url: "https://vidushimalik.netlify.app/",
+    icons: {
+    icon: "/favicon.ico", 
+    apple: "/apple-touch-icon.png", 
+    alternates: {
+    canonical: "/",
+  },
+  },
     images: [
       {
         url: "https://vidushimalik.netlify.app/og-image.png",

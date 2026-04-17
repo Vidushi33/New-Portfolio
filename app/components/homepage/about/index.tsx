@@ -3,21 +3,21 @@ import Image from "next/image";
 
 function AboutSection() {
   return (
-    <div id="about" className="my-12 lg:my-16 relative">
+    <div id="about" className=" relative">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
-        <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
+        <h1 className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
           ABOUT ME
-        </span>
+        </h1>
         <span className="h-36 w-[2px] bg-[#1a1443]"></span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="order-2 lg:order-1">
-          <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
+          <h2 className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
             Who am I?
-          </p>
+          </h2>
           <p className="text-gray-200 text-sm lg:text-lg">
             <b>
-              I’m a Software Engineer focused on building scalable products and
+              Software Engineer focused on building scalable products &
               resilient systems.
             </b>{" "}
           </p>

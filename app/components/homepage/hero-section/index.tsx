@@ -24,7 +24,7 @@ function HeroSection() {
     }
   };
   return (
-    <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
+    <section className="relative flex flex-col items-center justify-between ">
       <Image
         src="/hero.svg"
         alt="Hero"
@@ -37,12 +37,12 @@ function HeroSection() {
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
           <h1 className="text-xl sm:text-3xl font-bold leading-8 sm:leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             Hello, <br />
-            This is <span className=" text-pink-500">{personalData.name}</span>
+            This is <span className="text-pink-500">{personalData.name}</span>
             {` , I'm a Professional `}
             <span className=" text-[#16f2b3]">{personalData.designation}</span>.
           </h1>
 
-          <div className="my-12 flex items-center gap-3 lg:gap-5">
+          <div className="my-6 flex items-center gap-3 lg:gap-5">
             <Link
               href={personalData.github}
               target="_blank"

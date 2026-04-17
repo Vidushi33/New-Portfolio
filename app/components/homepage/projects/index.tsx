@@ -33,17 +33,17 @@ const Projects = () => {
   const hasMore = filteredProjects.length > 4;
 
   return (
-    <div id="projects" className="relative z-50 my-12 lg:my-24">
+    <div id="projects" className="relative z-50 ">
       <div className="sticky top-10">
         <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl opacity-30"></div>
         <div className="flex items-center justify-center sm:justify-start sm:relative">
           <span className="block sm:hidden w-4 h-[2px] bg-[#1a1443]"></span>
-          <span
+          <h2
             key={activeCategory}
             className="bg-[#1a1443] sm:absolute left-0 w-fit text-white px-5 py-3 text-base sm:text-xl rounded-md animate-category-change"
           >
             {getCategoryDisplay(activeCategory).toUpperCase()} PROJECTS
-          </span>
+          </h2>
          
           <span className="w-4 sm:w-full h-[2px] bg-[#1a1443]"></span>
         </div>
