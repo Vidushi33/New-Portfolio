@@ -23,7 +23,7 @@ export const metadata = {
     url: "https://vidushimalik.netlify.app/",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://vidushimalik.netlify.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Vidushi Malik Portfolio Preview",
