@@ -29,6 +29,7 @@ const ScrollToTop = () => {
     return (
         <button className={btnCls} onClick={onClickBtn}>
             <UpArrowIcon />
+            <span className="hidden">Top Button</span>
         </button>
     );
 };

@@ -127,6 +127,7 @@ function ContactForm() {
               }
               onBlur={checkRequired}
               value={userInput.name}
+              aria-label="Your Name: "
             />
           </div>
 
@@ -145,6 +146,7 @@ function ContactForm() {
                 checkRequired();
                 setError({ ...error, email: !isValidEmail(userInput.email) });
               }}
+              aria-label="Your Email: "
             />
             {error.email && (
               <p className="text-sm text-red-400">
@@ -166,6 +168,7 @@ function ContactForm() {
               onBlur={checkRequired}
               rows={4}
               value={userInput.message}
+              aria-label="Your Message: "
             />
           </div>
 

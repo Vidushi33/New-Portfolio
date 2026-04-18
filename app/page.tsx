@@ -1,21 +1,25 @@
 import HeroSection from "./components/homepage/hero-section";
-import ContactSection from "./components/homepage/contact";
-import Experience from "./components/homepage/experience";
-// import GithubSection from "./components/homepage/github";
-import Education from "./components/homepage/education";
 import AboutSection from "./components/homepage/about";
-import Projects from "./components/homepage/projects";
-import Skills from "./components/homepage/skills";
+import dynamic from "next/dynamic";
 
 export default async function Home() {
+  const Experience = dynamic(() => import("./components/homepage/experience"));
+  const Skills = dynamic(() => import("./components/homepage/skills"));
+  const Projects = dynamic(() => import("./components/homepage/projects"));
+  const Education = dynamic(() => import("./components/homepage/education"));
+  const ContactSection = dynamic(
+    () => import("./components/homepage/contact"),
+  );
   return (
-    <div suppressHydrationWarning className="flex flex-col gap-6 lg:gap-16 my-7 lg:my-10">
+    <div
+      suppressHydrationWarning
+      className="flex flex-col gap-6 lg:gap-16 my-7 lg:my-10"
+    >
       <HeroSection />
       <AboutSection />
       <Experience />
       <Skills />
       <Projects />
-      {/* <GithubSection /> */}
       <Education />
       <ContactSection />
     </div>

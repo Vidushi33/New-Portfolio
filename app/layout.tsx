@@ -9,13 +9,13 @@ import "./css/globals.scss";
 import "./css/card.scss";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" }); //display swap shoes a fallback font until Inter is ready
 
 const baseUrl = "https://vidushimalik.netlify.app";
 export const metadata = {
   title: "Vidushi Malik | Software Engineer",
   description:
-    "Software Engineer specializing in React & Next.js. Focused on high-performance frontend architecture and scalable web applications.",
+    "Software Engineer specializing in React & Next.js. Expert in building high-performance frontend architectures, scalable web applications, and optimized user interfaces.",
 
   metadataBase: new URL(baseUrl),
   icons: {
@@ -28,7 +28,7 @@ export const metadata = {
   openGraph: {
     title: "Vidushi Malik | Software Engineer",
     description:
-      "Software Engineer specializing in React & Next.js. Focused on high-performance frontend architecture and scalable web applications.",
+      "Software Engineer specializing in React & Next.js. Expert in building high-performance frontend architectures, scalable web applications, and optimized user interfaces.",
     url: baseUrl,
 
     images: [

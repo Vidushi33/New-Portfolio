@@ -1,9 +1,9 @@
 import AnimationLottie from "../../helper/animation-lottie";
 import lottieFile from "../../../assets/lottie/study.json";
 import { educations } from "@/utils/data/educations";
-import GlowCard from "../../helper/glow-card";
 import Image from "next/image";
 import WorkSpaceIcon from "@/app/assets/icons/workspaceIcon";
+import dynamic from "next/dynamic";
 
 interface EducationItem {
   id: number;
@@ -14,18 +14,15 @@ interface EducationItem {
 }
 
 function Education() {
+  const GlowCard = dynamic(() => import("../../helper/glow-card"));
   return (
-    <div
-      id="education"
-      className="relative z-50 border-t  border-[#25213b]"
-    >
+    <div id="education" className="relative z-50 border-t  border-[#25213b]">
       <Image
         src="/section.svg"
         alt="Hero"
         width={1572}
         height={795}
         className="absolute top-0 -z-10"
-        loading="lazy"
       />
       <div className="flex justify-center -translate-y-[1px]">
         <div className="w-3/4">
@@ -65,7 +62,6 @@ function Education() {
                       width={1080}
                       height={200}
                       className="absolute bottom-0 opacity-80"
-                      loading="lazy"
                     />
                     <div className="flex justify-center">
                       <p className="text-xs sm:text-sm text-[#16f2b3]">
