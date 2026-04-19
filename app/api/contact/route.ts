@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import {
   generateEmailTemplate,
-  generateAutoReplyTemplate,
 } from "@/app/utils/templates";
 
 interface EmailPayload {
@@ -51,23 +50,6 @@ async function sendEmail(
   }
 }
 
-/* ---------------- AUTO REPLY EMAIL ---------------- */
-
-async function sendAutoReply(name: string, email: string) {
-  try {
-    await transporter.sendMail({
-      from: `"Portfolio" <${process.env.EMAIL_ADDRESS}>`,
-      to: email,
-      subject: "Thank you for contacting me",
-      html: generateAutoReplyTemplate(name),
-      replyTo: process.env.EMAIL_ADDRESS,
-    });
-  } catch (error: any) {
-    // do NOT break the API if this fails
-    console.error("Auto reply failed:", error.message);
-  }
-}
-
 /* ---------------- API ROUTE ---------------- */
 
 export async function POST(request: NextRequest) {
@@ -110,11 +92,6 @@ ${message}
         { status: 500 },
       );
     }
-
-    /* ---- Send auto reply (non-blocking) ---- */
-
-    // sendAutoReply(name, email);
-
     return NextResponse.json(
       { success: true, message: "Message sent successfully!" },
       { status: 200 },
