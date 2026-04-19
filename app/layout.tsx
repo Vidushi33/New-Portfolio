@@ -1,4 +1,4 @@
-// import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import ScrollToTop from "./components/helper/scroll-to-top";
 import ToastProvider from "./components/ToastProvider";
 import { Inter } from "next/font/google";
@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </main>
         <Footer />
       </body>
-      {/* <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM || ""} /> */}
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA4 || ""} />
 
       <Script
         type="application/ld+json"
