@@ -15,6 +15,7 @@ function Footer() {
               target="_blank"
               href={personalData.linkedIn}
               className="text-[#16f2b3]"
+              rel="noopener noreferrer"
             >
               Vidushi Malik
             </Link>

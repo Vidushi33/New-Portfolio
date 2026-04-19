@@ -35,11 +35,19 @@ function ContactSection() {
             </div>
           </div>
           <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-6">
-            <Link target="_blank" rel="noopener noreferrer" href={personalData.github}>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={personalData.github}
+            >
               <WithoutBgGithubIcon className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer" />
               <span className="hidden">Github Icon</span>
             </Link>
-            <Link target="_blank" rel="noopener noreferrer" href={personalData.linkedIn}>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={personalData.linkedIn}
+            >
               <WithoutBgLinkedInIcon className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer" />
               <span className="hidden">LinkedIn Icon</span>
             </Link>
