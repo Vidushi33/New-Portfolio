@@ -42,7 +42,7 @@ function ContactForm() {
   const verifyRecaptcha = async (token: string) => {
     try {
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/google`,
+        `/api/google`,
         { token },
       );
       return res.data.success;
