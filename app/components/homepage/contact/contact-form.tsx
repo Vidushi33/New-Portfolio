@@ -117,7 +117,7 @@ function ContactForm() {
       <p className="hidden md:block font-medium mb-5 text-[#16f2b3] text-xl uppercase">
         Connect with me
       </p>
-      <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
+      <div className="text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
         <form onSubmit={handleSendMail} className="mt-6 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <label className="text-base">Your Name: </label>

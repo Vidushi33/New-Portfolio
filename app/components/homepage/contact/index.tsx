@@ -1,10 +1,3 @@
-import { personalData } from "@/utils/data/personal-data";
-import Link from "next/link";
-import WithoutBgLinkedInIcon from "@/app/assets/icons/withoutBgLinkedInIcon";
-import WithoutBgGithubIcon from "@/app/assets/icons/withoutBgGithub";
-import EmailIcon from "@/app/assets/icons/gmailIcon";
-import CallIcon from "@/app/assets/icons/callIcon";
-import LocationIcon from "@/app/assets/icons/locationIcon";
 import dynamic from "next/dynamic";
 import AnimationLottie from "../../helper/animation-lottie";
 import contact from "../../../assets/lottie/contact.json";
@@ -29,7 +22,7 @@ function ContactSection() {
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-        <div className="order-2 lg:order-1">
+        <div className="order-2 lg:order-1 ">
           <ContactForm />
         </div>
         <div className="order-1 lg:order-2 hidden md:flex justify-center items-center">
