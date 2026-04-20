@@ -2,9 +2,11 @@
 import { isValidEmail } from "@/utils/check-email";
 // import ReCAPTCHA from "react-google-recaptcha";
 import { toast } from "react-toastify";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import axios from "axios";
 import MailForward from "@/app/assets/icons/mailForward";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import Link from "next/link";
 
 interface FormData {
   name: string;
@@ -15,87 +17,94 @@ interface FormData {
 interface FormErrors {
   email: boolean;
   required: boolean;
-  recaptcha: boolean;
+  // recaptcha: boolean;
 }
 
 function ContactForm() {
   const [error, setError] = useState<FormErrors>({
     email: false,
     required: false,
-    recaptcha: false,
+    // recaptcha: false,
   });
+  // const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [userInput, setUserInput] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
-  // const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
-  // const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
   const checkRequired = () => {
     if (userInput.email && userInput.message && userInput.name) {
       setError({ ...error, required: false });
     }
   };
 
-  // const handleRecaptchaChange = (token: string | null) => {
-  //   setRecaptchaToken(token);
-  //   if (token) {
-  //     setError({ ...error, recaptcha: false });
-  //   }
-  // };
+  const verifyRecaptcha = async (token: string) => {
+    try {
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_APP_URL}/api/google`,
+        { token },
+      );
+      return res.data.success;
+    } catch (error) {
+      return false;
+    }
+  };
 
-  // const verifyRecaptcha = async (token: string) => {
-  //   try {
-  //     const res = await axios.post(
-  //       `${process.env.NEXT_PUBLIC_APP_URL}/api/google`,
-  //       { token }
-  //     );
-  //     return res.data.success;
-  //   } catch (error) {
-  //     return false;
-  //   }
-  // };
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const handleSendMail = async (e: React.FormEvent) => {
     e.preventDefault();
+    // const token = recaptchaRef.current?.getValue();
+    const isEmailValid = isValidEmail(userInput.email);
 
-    // Check required fields
-    if (!userInput.email || !userInput.message || !userInput.name) {
-      setError({ ...error, required: true });
-      return;
-    } else if (error.email) {
+    const hasEmptyFields =
+      !userInput.email || !userInput.message || !userInput.name;
+    if (hasEmptyFields || !isEmailValid) {
+      setError({
+        required: hasEmptyFields,
+        email: !isEmailValid && !!userInput.email,
+        // recaptcha: !token,
+      });
       return;
     }
-
-    // // Check reCAPTCHA
-    // if (!recaptchaToken) {
-    //   setError({ ...error, recaptcha: true, required: false });
+    // if (hasEmptyFields || !isEmailValid || !token) {
+    //   setError({
+    //     required: hasEmptyFields,
+    //     email: !isEmailValid && !!userInput.email,
+    //     recaptcha: !token,
+    //   });
     //   return;
     // }
+    if (!executeRecaptcha) {
+      toast.error("ReCAPTCHA not yet available");
+      return;
+    }
 
     try {
       setIsLoading(true);
 
-      // Verify reCAPTCHA first
-      // // const isRecaptchaValid = await verifyRecaptcha(recaptchaToken);
+      // const isRecaptchaValid = await verifyRecaptcha(token);
+      const token = await executeRecaptcha("contact_form_submit");
+      const isHuman = await verifyRecaptcha(token);
+      if (!isHuman) {
+        toast.error("Bot activity detected!");
+        return;
+      }
+
       // if (!isRecaptchaValid) {
+      //   recaptchaRef.current?.reset();
       //   setError({ email: false, required: false, recaptcha: true });
-      //   toast.error("reCAPTCHA verification failed!");
+      //   toast.error("Security check failed. Please try the checkbox again.");
       //   return;
       // }
 
-      // Send contact form data
-      const res = await axios.post(`/api/contact`, userInput);
+      const res = await axios.post("/api/contact", { ...userInput, token });
 
       toast.success("Message sent successfully!");
-      setUserInput({
-        name: "",
-        email: "",
-        message: "",
-      });
-      // setRecaptchaToken(null); // Reset reCAPTCHA
-      setError({ email: false, required: false, recaptcha: false });
+      setUserInput({ name: "", email: "", message: "" });
+      setError({ email: false, required: false });
+      // recaptchaRef.current?.reset();
     } catch (error: any) {
       toast.error(error?.response?.data?.message || "Failed to send message");
     } finally {
@@ -105,16 +114,11 @@ function ContactForm() {
 
   return (
     <div>
-      <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
+      <p className="hidden md:block font-medium mb-5 text-[#16f2b3] text-xl uppercase">
         Connect with me
       </p>
       <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
-        <p className="text-sm text-[#d3d8e8]">
-          {
-            "If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests."
-          }
-        </p>
-        <div className="mt-6 flex flex-col gap-4">
+        <form onSubmit={handleSendMail} className="mt-6 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <label className="text-base">Your Name: </label>
             <input
@@ -175,11 +179,43 @@ function ContactForm() {
           {/* <div className="flex flex-col gap-2 justify-center items-center">
             <label className="text-base text">Security Check: </label>
             <ReCAPTCHA
-              sitekey={recaptchaSiteKey}
-              onChange={handleRecaptchaChange}
+              ref={recaptchaRef}
+              size="normal"
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+              onChange={() =>
+                setError((prev) => ({ ...prev, recaptcha: false }))
+              }
             />
-            {error.recaptcha && <p className="text-sm text-red-400">Please complete the security check!</p>}
+
+            {error.recaptcha && (
+              <p className="text-sm text-red-400">
+                Please complete the security check!
+              </p>
+            )}
           </div> */}
+          <div className="mt-2">
+            <p className="text-[10px] md:text-xs text-[#d3d8e8] opacity-60 text-center">
+              This site is protected by reCAPTCHA and the Google
+              <Link
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer "
+                className="text-[#16f2b3] hover:underline mx-1"
+              >
+                Privacy Policy
+              </Link>
+              and
+              <Link
+                href="https://policies.google.com/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#16f2b3] hover:underline mx-1"
+              >
+                Terms of Service
+              </Link>
+              apply.
+            </p>
+          </div>
           <div className="flex flex-col items-center gap-3">
             {error.required && (
               <p className="text-sm text-red-400">All fields are required!</p>
@@ -200,7 +236,7 @@ function ContactForm() {
               )}
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

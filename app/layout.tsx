@@ -8,6 +8,7 @@ import { ReactNode } from "react";
 import "./css/globals.scss";
 import "./css/card.scss";
 import Script from "next/script";
+import { CaptchaProvider } from "./captchaProvider";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" }); //display swap shoes a fallback font until Inter is ready
 
@@ -47,13 +48,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.className}>
       <body cz-shortcut-listen="true">
-        <ToastProvider />
-        <main className="min-h-screen relative mx-auto px-4 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
-          <Navbar />
-          {children}
-          <ScrollToTop />
-        </main>
-        <Footer />
+        <CaptchaProvider>
+          <ToastProvider />
+          <main className="min-h-screen relative mx-auto px-4 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
+            <Navbar />
+            {children}
+            <ScrollToTop />
+          </main>
+          <Footer />
+        </CaptchaProvider>
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA4 || ""} />
 

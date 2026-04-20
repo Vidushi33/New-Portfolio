@@ -1,12 +1,7 @@
-interface IProps {
-  className: string;
-}
-
-export default function WithoutBgGithubIcon({ className }: IProps) {
+export default function WithoutBgGithubIcon() {
   return (
-    <div className={className}>
       <svg
-        className="w-6 h-6"
+        className="w-10 h-10"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -20,6 +15,5 @@ export default function WithoutBgGithubIcon({ className }: IProps) {
           clipRule="evenodd"
         />
       </svg>
-    </div>
   );
 }

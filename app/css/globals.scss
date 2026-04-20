@@ -91,3 +91,7 @@ body {
 span > span {
   animation: fadeInUnderline 0.5s ease-out;
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
