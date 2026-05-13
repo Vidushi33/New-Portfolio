@@ -17,6 +17,8 @@ import html from "../app/assets/svg/skills/html.svg";
 import css from "../app/assets/svg/skills/css.svg";
 import gcp from "../app/assets/svg/skills/gcp.svg";
 import git from "../app/assets/svg/skills/git.svg";
+import postgresql from "../app/assets/svg/skills/postgresql.svg";
+import typeorm from "../app/assets/svg/skills/typeorm.svg";
 
 // Define type for skill images
 type SkillImageType = typeof gcp; // Using gcp as a representative type for SVG imports
@@ -44,6 +46,10 @@ export const skillsImage = (skill: string): SkillImageType | undefined => {
       return bootstrap;
     case "mongodb":
       return mongoDB;
+    case "postgresql":
+      return postgresql;
+    case "typeorm":
+      return typeorm;
     case "vitejs":
       return vitejs;
     case "git":

@@ -7,6 +7,7 @@ export const skillsData: string[] = [
   "NodeJS",
   "ExpressJS",
   "NestJS",
+  "TypeORM",
 
   // 🔹 Frontend
   "ReactJS",
@@ -21,6 +22,7 @@ export const skillsData: string[] = [
 
   // 🔹 Databases & Caching
   "MongoDB",
+  "PostgreSQL",
 
   // 🔹 DevOps & Cloud
   "GitHub Actions",
