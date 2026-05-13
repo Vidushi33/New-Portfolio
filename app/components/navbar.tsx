@@ -77,7 +77,7 @@ function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#16f2b3] hover:text-pink-600 focus:outline-none transition-colors duration-500"
+            className="cursor-pointer md:hidden inline-flex items-center justify-center p-2 rounded-md text-[#16f2b3] hover:text-pink-600 focus:outline-none transition-colors duration-500"
             aria-expanded="false"
           >
             {isOpen ? <CloseIcon /> : <HamburgerIcon />}
