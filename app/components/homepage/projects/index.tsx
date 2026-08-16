@@ -7,12 +7,10 @@ import {
   type ProjectCategory,
 } from "@/utils/constants/categories";
 import { useState } from "react";
-import dynamic from "next/dynamic";
+import ProjectCard from './project-card';
 
 const Projects = () => {
-  const ProjectCard = dynamic(() => import("./project-card"), {
-  ssr: false,
-});
+  
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>(
     PROJECT_CATEGORIES.ONSITE,
   );

@@ -8,7 +8,7 @@ interface Project {
   demo: string;
   image?: string;
   features?: string[];
-  category: "onsite" | "frontend" | "backend" | "inprogress";
+  category: "onsite" | "frontend" | "backend" | "inprogress" | "fullstack";
   isFeatured?: boolean;
 }
 
@@ -62,25 +62,25 @@ export const projectsData: Project[] = [
     category: "frontend",
     isFeatured: true,
   },
-  {
-    id: 4,
-    name: "Campaign Management & Bot Platform",
-    description:
-      "Built a campaign management platform with bot creation and automated conversation workflows. Implemented Redis-based caching and BullMQ queues for scalable background processing and reliable automation.",
-    tools: [
-      "ReactJS",
-      "TypeScript",
-      "Zustand",
-      "Tailwind CSS",
-      "Ant Design",
-      "Reactflow",
-    ],
-    role: "Frontend Developer",
-    code: "",
-    demo: "",
-    category: "onsite",
-    isFeatured: true,
-  },
+  // {
+  //   id: 4,
+  //   name: "Campaign Management & Bot Platform",
+  //   description:
+  //     "Built a campaign management platform with bot creation and automated conversation workflows. Implemented Redis-based caching and BullMQ queues for scalable background processing and reliable automation.",
+  //   tools: [
+  //     "ReactJS",
+  //     "TypeScript",
+  //     "Zustand",
+  //     "Tailwind CSS",
+  //     "Ant Design",
+  //     "Reactflow",
+  //   ],
+  //   role: "Frontend Developer",
+  //   code: "",
+  //   demo: "",
+  //   category: "onsite",
+  //   isFeatured: true,
+  // },
   {
     id: 5,
     name: "Multi-Tenant SaaS Product",
@@ -102,5 +102,26 @@ export const projectsData: Project[] = [
     code: "https://github.com/Vidushi33/Book-Company-Backend",
     demo: "",
     category: "backend",
+  },
+   {
+    id: 7,
+    name: "AI Resume Analyzer",
+    description:
+      "Full-stack AI application that analyzes PDF or text resumes using OpenAI, Gemini, and Claude to generate summaries, skills, strengths, weaknesses, and suggested roles.",
+    tools: [
+      "NestJs",
+      "NodeJs",
+      "OpenAI API",
+      "Google Gemini API",
+      "Anthropic Claude API",
+      "System Prompts",
+      "Server-Sent Events (SSE)",
+      "NextJs",
+      "Typescript"
+    ],
+    role: "Fullstack Developer",
+    code: "https://github.com/Vidushi33/AiResumeAnalysis-Backend",
+    demo: "https://ai-resume-analysis-frontend-six.vercel.app/",
+    category: "fullstack",
   },
 ];

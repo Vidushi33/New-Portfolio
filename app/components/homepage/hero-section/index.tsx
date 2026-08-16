@@ -1,5 +1,5 @@
 "use client";
-import { personalData } from "@/utils/data/personal-data";
+import { personalData, profileSkills } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
 import GithubIcon from "@/app/assets/icons/githubIcon";
@@ -7,6 +7,7 @@ import LinkedinIcon from "@/app/assets/icons/linkedinIcon";
 import Leetcode from "@/app/assets/icons/leetcodeIcon";
 import ContactmeIcon from "@/app/assets/icons/contactmeIcon";
 import DownloadIcon from "@/app/assets/icons/downloadIcon";
+import React from "react";
 
 function HeroSection() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -127,24 +128,15 @@ function HeroSection() {
               <div className="ml-4 lg:ml-8 mr-2">
                 <span className=" text-white">skills:</span>
                 <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">ReactJS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NextJS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Typescript</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Javascript</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Zustand</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Github Actions</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Tailwind CSS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Material UI</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Web Hosting</span>
-                <span className="text-gray-400">{"'],"}</span>
+                {profileSkills.map((skill, index) => (
+                  <React.Fragment key={skill}>
+                    <span className="text-amber-300">{skill}</span>
+
+                    <span className="text-gray-400">
+                      {index === profileSkills.length - 1 ? "']," : "', '"}
+                    </span>
+                  </React.Fragment>
+                ))}
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">

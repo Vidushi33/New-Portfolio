@@ -16,24 +16,33 @@ function AboutSection() {
             Who am I?
           </h2>
           <p className="text-gray-200 text-sm lg:text-lg">
+            I’m a <b>Full Stack Engineer</b> with{" "}
             <b>
-              Software Engineer focused on building scalable products &
-              resilient systems.
-            </b>{" "}
+              2.5+ years of professional experience and 5+ years of hands-on
+              development experience{" "}
+            </b>
+             focused on building scalable, high-performance, and user-centric web
+            applications. I like being involved throughout the product journey —
+            understanding the problem, designing the solution, building it,
+            refining the experience, and making sure it works well in the real
+            world.
           </p>
           <p className="text-gray-200 text-sm lg:text-lg">
-            With 2+ years in the <b>Next.js ecosystem</b>, I specialize in
-            transforming complex Figma designs into high-performance web
-            applications. I focus on the critical details that drive product
-            success: slashing load times by 40% via <b>Core Web Vitals</b>{" "}
-            optimization and ensuring 100% data integrity through robust state
-            management.
+            I’m a curious and product-minded engineer who cares about{" "}
+            <b>
+              clean code, thoughtful user experiences, performance, and
+              scalability.
+            </b>{" "}
+            I also enjoy exploring and integrating{" "}
+            <b>LLM-powered capabilities</b> into applications and using AI
+            developer tools like{" "}
+            <b>GitHub Copilot, OpenAI, Gemini and Claude</b> to improve
+            productivity, debugging, problem-solving, and development workflows.
           </p>
           <p className="text-gray-200 text-sm lg:text-lg">
-            <b>
-              I thrive on taking full ownership of projects to deliver seamless
-              experiences that solve real-world problems.
-            </b>{" "}
+            I believe good engineering is not just about writing code — it’s
+            about <b>understanding why something needs to be built and finding the
+            simplest, most effective way to build it.</b>
           </p>
         </div>
         <div className="flex justify-center items-center order-1 lg:order-2 h-full">

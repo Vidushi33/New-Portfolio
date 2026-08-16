@@ -19,7 +19,7 @@ export interface PersonalData {
 export const personalData: PersonalData = {
   name: "VIDUSHI MALIK",
   profile: "/profile.png",
-  designation: "Software Engineer",
+  designation: "Fullstack Engineer",
   // description:
   //   "Full Stack Developer with 3 years of experience in designing and developing scalable web and mobile applications using React.js, Next.js, Node.js, and NestJS. Experienced in building RESTful APIs, microservices architectures, and queue-based systems. Hands-on experience with AWS deployments, Docker containerization, and performance optimization. Familiar with Data Structures and Algorithms and continuously improving problem-solving skills.",
   email: "vidushimalik135@gmail.com",
@@ -35,3 +35,20 @@ export const personalData: PersonalData = {
   // resume:
   //   "https://drive.google.com/file/d/1tw45GuhsWTsh0yIctu6yJCnJCOp06uTq/view?usp=sharing",
 };
+
+
+export const profileSkills = [
+  "ReactJS",
+  "NextJS",
+  "Typescript",
+  "Zustand",
+  "NodeJs",
+  "NestJs",
+  "MongoDB",
+  "PostgreSQL",
+  "LLM Integration",
+  "Github Actions",
+  "Tailwind CSS",
+  "Material UI",
+  "Web Hosting",
+];
