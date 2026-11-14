@@ -124,4 +124,25 @@ export const projectsData: Project[] = [
     demo: "https://ai-resume-analysis-frontend-six.vercel.app/",
     category: "fullstack",
   },
+  {
+    id: 7,
+    name: "MERN Task Handler",
+    description:
+      "Full-stack task management application that allows users to create, update, delete, search, and track tasks with priorities, due dates, and completion status. Features a responsive, mobile-first UI with weekly task summaries and REST API integration.",
+    tools: [
+      "MongoDB",
+      "ExpressJs",
+      "ReactJs",
+      "NodeJs",
+      "Typescript",
+      "Tailwind CSS",
+      "REST APIs",
+      "Vercel",
+      "Render",
+    ],
+    role: "Fullstack Developer",
+    code: "https://github.com/Vidushi33/AiResumeAnalysis-Backend",
+    demo: "https://mern-to-do-frontend-rho.vercel.app/",
+    category: "fullstack",
+  },
 ];
