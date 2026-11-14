@@ -103,7 +103,7 @@ export const projectsData: Project[] = [
     demo: "",
     category: "backend",
   },
-   {
+  {
     id: 7,
     name: "AI Resume Analyzer",
     description:
@@ -117,7 +117,7 @@ export const projectsData: Project[] = [
       "System Prompts",
       "Server-Sent Events (SSE)",
       "NextJs",
-      "Typescript"
+      "Typescript",
     ],
     role: "Fullstack Developer",
     code: "https://github.com/Vidushi33/AiResumeAnalysis-Backend",

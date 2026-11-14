@@ -40,8 +40,9 @@ function Navbar() {
     { label: "ABOUT", href: "/#about" },
     { label: "EXPERIENCE", href: "/#experience" },
     { label: "SKILLS", href: "/#skills" },
-    { label: "EDUCATION", href: "/#education" },
     { label: "PROJECTS", href: "/#projects" },
+    { label: "EDUCATION", href: "/#education" },
+    { label: "CONTACT", href: "/#contact" },
   ];
 
   return (
