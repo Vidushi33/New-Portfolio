@@ -141,7 +141,7 @@ export const projectsData: Project[] = [
       "Render",
     ],
     role: "Fullstack Developer",
-    code: "https://github.com/Vidushi33/AiResumeAnalysis-Backend",
+    code: "https://github.com/Vidushi33/MERN-to-do-backend",
     demo: "https://mern-to-do-frontend-rho.vercel.app/",
     category: "fullstack",
   },
