@@ -125,7 +125,7 @@ export const projectsData: Project[] = [
     category: "fullstack",
   },
   {
-    id: 7,
+    id: 8,
     name: "MERN Task Handler",
     description:
       "Full-stack task management application that allows users to create, update, delete, search, and track tasks with priorities, due dates, and completion status. Features a responsive, mobile-first UI with weekly task summaries and REST API integration.",
